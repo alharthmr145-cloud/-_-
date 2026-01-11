@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>عربيتك علينا</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;}
+body{
+    margin:0;
+    font-family:Tahoma, Arial;
+    color:white;
+    position:relative;
+}
+
+/* الصفحات */
+.page{
+    display:none;
+    min-height:100vh;
+    padding:20px;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+}
+.page.active{display:block}
+.center{text-align:center}
+
+/* اللوغو */
+.logo{
+    width:150px;
+    height:150px;
+    margin:15px auto;
+    border-radius:50%;
+    border:4px solid #d4af37; /* إطار دهبي */
+    background:url("11.png") center/cover;
+}
+
+/* اسم المعرض */
+.brand{
+    font-size:36px;
+    font-weight:bold;
+    color:#222;
+    text-shadow:0 0 10px rgba(255,255,255,.6);
+}
+
+/* الأزرار */
+.btn{
+    background:linear-gradient(135deg,#d4af37,#8b7500);
+    border:none;
+    padding:12px 28px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    margin:6px;
+    transition:0.3s;
+}
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* الشعار المتحرك */
+.marquee{
+    overflow:hidden;
+    white-space:nowrap;
+    margin:20px 0;
+}
+.marquee span{
+    display:inline-block;
+    padding-left:100%;
+    animation:move 12s linear infinite;
+    color:gold;
+    font-size:18px;
+}
+@keyframes move{
+    from{transform:translateX(0)}
+    to{transform:translateX(-100%)}
+}
+
+/* فريق الدعم أيقونة */
+.support-icon{
+    position:absolute;
+    top:15px;
+    left:15px;
+    text-align:center;
+    cursor:pointer;
+}
+.support-icon img{width:45px}
+.support-icon span{
+    display:block;
+    font-size:14px;
+    font-family:'Arial Black', Gadget, sans-serif;
+    background:black; /* خلفية سوداء */
+    color:gold;
+    padding:3px 8px;
+    border-radius:5px;
+    transition:0.3s;
+}
+.support-icon span:hover{
+    color:cyan; /* يتغير عند الضغط أو التمرير */
+    transform:scale(1.1);
+    text-shadow:0 0 10px #fff;
+}
+
+/* السوشيال */
+.social{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:25px 0;
+}
+.social img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+/* السيارات */
+.car{
+    display:flex;
+    gap:15px;
+    background:rgba(0,0,0,.65);
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+.car img{
+    width:170px;
+    border-radius:10px;
+}
+
+/* أزرار سفلية */
+.bottom-buttons{
+    text-align:center;
+    margin-top:25px;
+}
+
+/* الفوتر */
+.footer{
+    text-align:center;
+    font-size:14px;
+    color:#ccc;
+    padding:10px 0;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:rgba(0,0,0,.4);
+}
+
+/* الفورم */
+form{
+    background:rgba(0,0,0,.65);
+    padding:20px;
+    border-radius:15px;
+    max-width:400px;
+    margin:auto;
+}
+input{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:10px;
+    border:none;
+}
+.message{
+    margin-top:10px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- الصفحة الرئيسية -->
+<div id="home" class="page active center" style="background-image:url('Background 1.jpg')">
+
+<div class="support-icon" onclick="showPage('support')">
+<img src="SupportTeam.jpg">
+<span>Support Team</span>
+</div>
+
+<div class="logo"></div>
+<div class="brand">عربيتك علينا</div>
+
+<div class="marquee">
+<span>سرعة • ضمان • جودة عالية للحديد</span>
+</div>
+
+<div class="social">
+<a href="https://facebook.com" target="_blank"><img src="Facebook.jpg"></a>
+<a href="https://wa.me/249119491830" target="_blank"><img src="WhatsApp.jpg"></a>
+<a href="#"><img src="TikTok.jpg"></a>
+</div>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('categories')">الأقسام</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<!-- فريق الدعم -->
+<div id="support" class="page" style="background-image:url('Support Team.jpg')">
+<h2 class="center">فريق الدعم</h2>
+
+<p><b>الإيميل</b></p>
+<p>ALHARETH<br>
+<a href="mailto:alharthmr145@gmail.com">alharthmr145@gmail.com</a></p>
+
+<p>TABO<br>
+<a href="mailto:medooadil715@gmail.com">medooadil715@gmail.com</a></p>
+
+<p><b>التواصل عبر واتساب</b></p>
+<p>محمد عبد الله<br>
+<a href="https://wa.me/249112582495">+249 11 258 2495</a></p>
+
+<p>عصام بابكر<br>
+<a href="https://wa.me/249119795437">+249 11 979 5437</a></p>
+
+<p>محمد أحمد "التوم"<br>
+<a href="https://wa.me/249118334329">+249 11 833 4329</a></p>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('home')">الرئيسية</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<!-- الأقسام -->
+<div id="categories" class="page center" style="background-image:url('background2.jpg')">
+<h2>اختر القسم</h2>
+
+<button class="btn" onclick="showPage('tucson')">توسان & اكسنت</button><br>
+<button class="btn" onclick="showPage('hilux')">قسم الهايلوكس</button><br>
+<button class="btn" onclick="showPage('small')">سيارات صغيرة</button>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('home')">الرئيسية</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<!-- توسان واكسنت -->
+<div id="tucson" class="page" style="background-image:url('background2.jpg')">
+<h2>توسان & اكسنت</h2>
+
+<div class="car"><img src="1.webp"><div>توسان 2025 سوداء<br>80 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="2.webp"><div>اكسنت 2025 بيضاء<br>50 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="3.webp"><div>توسان 2020 بيضاء<br>65 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="4.webp"><div>اكسنت 2018 حمراء<br>25,000,000 جنيه<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('categories')">رجوع</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<!-- قسم الهايلوكس -->
+<div id="hilux" class="page" style="background-image:url('background2.jpg')">
+<h2>قسم الهايلوكس</h2>
+
+<div class="car"><img src="2026.jpg"><div>هايلوكس 2026 أسود<br>200 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="2016.webp"><div>هايلوكس 2016<br>110 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="LandCruiser.webp"><div>Land Cruiser 2026<br>200 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="Lexus2026.jpeg"><div>Lexus 2026<br>250 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('categories')">رجوع</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<!-- سيارات صغيرة (عربيتين فقط) -->
+<div id="small" class="page" style="background-image:url('background2.jpg')">
+<h2>سيارات صغيرة</h2>
+
+<div class="car"><img src="i10.jpg"><div>i10 2026<br>15 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+<div class="car"><img src="Sasuke.jpeg"><div>Suzuki Alto 2020<br>20 مليار<br><button class="btn" onclick="showPage('booking')">حجز</button></div></div>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('categories')">رجوع</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<!-- صفحة الحجز -->
+<div id="booking" class="page center" style="background-image:url('background2.jpg')">
+<h2>نموذج الحجز</h2>
+
+<form onsubmit="return validateForm()">
+<input type="text" id="name" placeholder="الاسم الثلاثي">
+<input type="tel" id="phone" placeholder="رقم الهاتف (10 أرقام)">
+<input type="text" id="address" placeholder="مكان السكن">
+<button class="btn" type="submit">تأكيد الحجز</button>
+<div id="msg" class="message"></div>
+</form>
+
+<div class="bottom-buttons">
+<button class="btn" onclick="showPage('home')">الرئيسية</button>
+</div>
+
+<div class="footer">© حقوق الطبع والنشر محفوظة ® TEAM HERO</div>
+</div>
+
+<script>
+function showPage(id){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function validateForm(){
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let address = document.getElementById("address").value.trim();
+    let msg = document.getElementById("msg");
+
+    let errors = [];
+
+    if(!name || name.length < 10) errors.push("الاسم");
+    if(!phone || !/^\d{10}$/.test(phone)) errors.push("رقم الهاتف");
+    if(!address) errors.push("مكان السكن");
+
+    if(errors.length === 0){
+        msg.innerHTML = "تم الحجز بنجاح";
+        msg.style.color = "lightgreen";
+        return false;
+    }else if(errors.length === 1){
+        msg.innerHTML = "يرجى كتابة " + errors[0];
+    }else{
+        msg.innerHTML = "يرجى كتابة البيانات";
+    }
+
+    msg.style.color = "red";
+    return false;
+}
+</script>
+
+</body>
+</html>
